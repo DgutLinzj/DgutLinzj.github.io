@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel='stylesheet' type='text/css' href='./lib/bootstrap/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/features.css">
+</head>
+<script id="featTemp" type="text/template">
+{{each featObj as value}}
+    <div class="media">
+        <div class="media-left">
+            <a href="javascript:;">
+                <img class="media-object" src="{{value.img}}" alt="...">
+            </a>
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{value.name}}</h4>
+            <p>{{value.episode}}</p>
+            <p>{{value.updateTime}}</p>
+            <p>下载次数:{{value.downloadCount}}</p>
+        </div>
+    </div>
+{{/each}}
+</script>
+
+<body>
+    <div class="features-header">
+        <span class="icon-back"></span>
+        <h4>连载动漫</h4>
+    </div>
+    <div class="features-content">
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="../../jd/images/618-icon.png" alt="...">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">Maho Girls 光之美少女！/魔法师光之美少女</h4>
+                <p>连载至36集</p>
+                <p>10-11 更新 </p>
+                <p>下载次数:7450</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./js/template.js"></script>
+<script src="./js/features.js"></script>
+
+</html>

@@ -1,0 +1,151 @@
+@import "base.less";
+// 主界面
+.layout {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    // 头部
+    header {
+        height: 40px;
+        position: relative;
+        background-color: #f5f5f5;
+        padding-left: 36px;
+        padding-right: 36px;
+        .icon-menu {
+            height: 100%;
+            font-size: 20px;
+            padding: 8px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .icon-search {
+            height: 100%;
+            font-size: 20px;
+            padding: 8px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .head-title {
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+        }
+    }
+    // 轮播图
+    .hl-carousel {
+        .carousel-indicators {
+            margin-bottom: 0;
+            margin-left: -16%;
+            text-align: right;
+        }
+        .carousel-inner {
+            .carousel-caption {
+                bottom: 0;
+                padding-bottom: 0;
+                padding-top: 0;
+                width: 100%;
+                left: 0;
+                right: 0;
+                height: 36px;
+                line-height: 36px;
+                background-color: rgba(0, 0, 0, .5);
+                text-align: left;
+                padding-left: 20px;
+            }
+        }
+    }
+    // 内容主体
+    .hl-view {
+        .nav-tabs {
+            width: 100%;
+            box-sizing: border-box;
+            li {
+                width: 25%;
+                box-sizing: border-box;
+                &.active {
+                    border: none;
+                    border-bottom: 2px solid red;
+                    a {
+                        color: #555;
+                    }
+                }
+                a {
+                    border: none;
+                    color: #000;
+                    &:focus {
+                        border: none;
+                    }
+                    &:hover {
+                        border: none;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            ul {
+                width: 100%;
+                padding: 10px 0;
+                li {
+                    width: 50%;
+                    float: left;
+                    padding: 5px;
+                    // 不写死缩放后每个li高度不一样，导致浮动无法平滑对齐
+                    height: 225px;
+                    a {
+                        display: block;
+                        position: relative;
+                        img {
+                            width: 100%;
+                        }
+                        p {
+                            width: 100%;
+                            height: 36px;
+                            background-color: rgba(0, 0, 0, .3);
+                            text-align: center;
+                            line-height: 36px;
+                            font-size: 16px;
+                            color: #fff;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 遮罩层
+    .mask{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        position: absolute;
+        left:0;
+        top:0;
+        z-index: 1;
+        display: none;
+    }
+}
+
+//左边菜单栏
+.left-menu{
+    width: 55%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    left:0;
+    top:0;
+    transform: translateX(-100%);
+    li{
+        a{
+            display: block;
+            color:black;
+            text-decoration: none;
+            height:100%;
+        }
+    }
+}
